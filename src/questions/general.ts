@@ -58,4 +58,69 @@ export const generalQuestions: Question[] = [
       "Props och state är synonymer och kan användas omväxlande.",
     ),
   ]),
+
+  new Question(
+    "Ge ett exempel på hur du använder en `map`-funktion för att rendera flera komponenter baserat på en array i React med TypeScript.",
+    [
+      new CorrectAnswer(
+        "<ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul>",
+      ),
+      new IncorrectAnswer(
+        "<ul>{items.forEach((item, index) => <li key={index}>{item}</li>)}</ul>",
+      ),
+      new IncorrectAnswer("<ul>{items.map(item => <li>{item}</li>)}</ul>"),
+    ],
+  ),
+
+  new Question(
+    "Hur hanterar du formulärhändelser, som inmatningsändringar, i en funktionell komponent med TypeScript?",
+    [
+      new CorrectAnswer(
+        "const MyForm = () => { const [inputValue, setInputValue] = useState<string>(''); const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => { setInputValue(event.target.value); }; return <input type='text' value={inputValue} onChange={handleInputChange} />; };",
+      ),
+      new IncorrectAnswer(
+        "const MyForm = () => { const [inputValue, setInputValue] = useState<string>(''); const handleInputChange = (value: string) => { setInputValue(value); }; return <input type='text' value={inputValue} onChange={handleInputChange} />; };",
+      ),
+      new IncorrectAnswer(
+        "const MyForm = () => { const [inputValue, setInputValue] = useState<string>(''); return <input type='text' value={inputValue} onChange={(event) => setInputValue(event.target.value)} />; };",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Hur använder du en `NavLink` för att skapa en navigeringslänk i React med TypeScript?",
+    [
+      new CorrectAnswer(
+        "<NavLink to='/dashboard' activeClassName='active'>Dashboard</NavLink>",
+      ),
+      new IncorrectAnswer("<Link to='/dashboard'>Dashboard</Link>"),
+      new IncorrectAnswer("<a href='/dashboard'>Dashboard</a>"),
+    ],
+  ),
+
+  new Question(
+    "Visa hur du använder `useHistory`-hook för att navigera programmatoriskt i React med TypeScript.",
+    [
+      new CorrectAnswer(
+        "const history = useHistory(); const handleClick = () => { history.push('/dashboard'); };",
+      ),
+      new IncorrectAnswer(
+        "const history = useNavigate(); const handleClick = () => { history('/dashboard'); };",
+      ),
+      new IncorrectAnswer(
+        "const history = useHistory(); const handleClick = () => { navigate('/dashboard'); };",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Hur inkluderar du ett externt stylesheet i en React-komponent?",
+    [
+      new CorrectAnswer("import './styles.css';"),
+      new IncorrectAnswer("const styles = require('./styles.css');"),
+      new IncorrectAnswer(
+        "<link rel='stylesheet' type='text/css' href='./styles.css' />",
+      ),
+    ],
+  ),
 ];

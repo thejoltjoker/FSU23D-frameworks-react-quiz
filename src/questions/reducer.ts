@@ -70,4 +70,131 @@ export const useReducerQuestions: Question[] = [
       ),
     ],
   ),
+
+  new Question("Vad är huvudsyftet med `useReducer` i React med TypeScript?", [
+    new IncorrectAnswer("Hantera tillstånd i funktionella komponenter."),
+    new CorrectAnswer(
+      "Hantera komplexa tillstånd och logik i funktionella komponenter.",
+    ),
+    new IncorrectAnswer("Ersätta `useState` för alla scenarier."),
+  ]),
+
+  new Question(
+    "Hur skapar du en reducer-funktion för att använda med `useReducer`?",
+    [
+      new IncorrectAnswer(
+        "Det krävs ingen reducer-funktion, bara en initialiseringsfunktion.",
+      ),
+      new CorrectAnswer(
+        "Skapa en funktion som tar två argument: aktuellt tillstånd och en åtgärd.",
+      ),
+      new IncorrectAnswer(
+        "Använda inbyggda reducer-funktioner som `createReducer`.",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Vilken information innehåller `dispatch`-funktionen som skapas med `useReducer`?",
+    [
+      new IncorrectAnswer("Endast det aktuella tillståndet."),
+      new CorrectAnswer("En åtgärd som används för att uppdatera tillståndet."),
+      new IncorrectAnswer(
+        "Alla tidigare åtgärder som har skickats till reducer-funktionen.",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Vad är fördelen med att använda `useReducer` över `useState` i vissa situationer?",
+    [
+      new CorrectAnswer(
+        "`useReducer` är fördelaktigt när du har komplex logik som kräver flera steg för att uppdatera tillståndet.",
+      ),
+      new IncorrectAnswer("Det är ingen fördel, de är utbytbara."),
+      new IncorrectAnswer(
+        "`useReducer` är alltid mindre prestandaoptimerat än `useState`.",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Hur skickar du åtgärder till reducer-funktionen när du använder `useReducer`?",
+    [
+      new CorrectAnswer(
+        "Genom att anropa `dispatch` med en åtgärd som argument.",
+      ),
+      new IncorrectAnswer(
+        "Använda en funktion som heter `sendAction` istället för `dispatch`.",
+      ),
+      new IncorrectAnswer(
+        "Åtgärder skickas automatiskt till reducer-funktionen när de uppstår.",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Kan du använda flera `useReducer`-anrop i samma funktionella komponent?",
+    [
+      new CorrectAnswer(
+        "Ja, du kan använda flera `useReducer`-anrop för olika tillstånd.",
+      ),
+      new IncorrectAnswer("Nej, det leder till konflikter och fel."),
+      new IncorrectAnswer(
+        "Ja, men det kräver extra hantering för att undvika konflikter.",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Vilka är de två huvudparametrarna som skickas till reducer-funktionen i `useReducer`?",
+    [
+      new IncorrectAnswer("Enbart nästa tillstånd."),
+      new CorrectAnswer("Aktuellt tillstånd och åtgärd."),
+      new IncorrectAnswer("Endast åtgärden som orsakade tillståndsändringen."),
+    ],
+  ),
+
+  new Question(
+    "Kan du använda `useReducer` utan att deklarera en reducer-funktion direkt i `useReducer`-anropet?",
+    [
+      new IncorrectAnswer(
+        "Nej, reducer-funktionen måste alltid deklareras vid användning av `useReducer`.",
+      ),
+      new CorrectAnswer(
+        "Ja, genom att definiera reducer-funktionen separat och sedan använda den i `useReducer`.",
+      ),
+      new IncorrectAnswer(
+        "Bara om du också använder `useState` i samma komponent.",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Hur returnerar reducer-funktionen det nya tillståndet efter att ha behandlat en åtgärd?",
+    [
+      new CorrectAnswer(
+        "Genom att returnera det nya tillståndet från reducer-funktionen.",
+      ),
+      new IncorrectAnswer("Genom att ändra det aktuella tillståndet direkt."),
+      new IncorrectAnswer(
+        "Åtgärder i `useReducer` hanterar inte tillståndsändringar.",
+      ),
+    ],
+  ),
+
+  new Question(
+    "Kan du använda `useReducer` tillsammans med `useContext` för att hantera globalt tillstånd?",
+    [
+      new CorrectAnswer(
+        "Ja, kombinera `useReducer` för lokal tillståndshantering och `useContext` för global tillgång.",
+      ),
+      new IncorrectAnswer(
+        "Nej, `useReducer` är endast för lokal tillståndshantering.",
+      ),
+      new IncorrectAnswer(
+        "Bara om du använder Redux för global tillståndshantering.",
+      ),
+    ],
+  ),
 ];

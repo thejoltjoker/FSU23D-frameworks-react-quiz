@@ -18,8 +18,12 @@ function App() {
     }
 
     const categoryQuestions = _.get(questions, questionCategory);
-
-    setQuestion(categoryQuestions[_.random(0, categoryQuestions.length - 1)]);
+    const chosenQuestion =
+      categoryQuestions[_.random(0, categoryQuestions.length - 1)];
+    setQuestion({
+      ...chosenQuestion,
+      answers: _.shuffle(chosenQuestion.answers),
+    });
   };
 
   const handleResponse = (
@@ -56,7 +60,7 @@ function App() {
 
   return (
     <>
-      <div className="flex h-full items-center justify-center">
+      <div className="flex h-full items-center justify-center px-4">
         <div className="w-full max-w-screen-md rounded-xl bg-base-100 p-4 shadow">
           {question && (
             <>
