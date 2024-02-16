@@ -19,14 +19,14 @@ export const useContextQuestions: Question[] = [
     ],
   ),
 
-  new Question("Hur skapar du en instans av en React Context i TypeScript?", [
+  new Question("Hur skapar du en instans av en React Context?", [
     new IncorrectAnswer("const context = createContext();"),
     new CorrectAnswer("const context = createContext<ContextType>();"),
     new IncorrectAnswer("const context = createContext(null);"),
   ]),
 
   new Question(
-    "Hur konsumerar du värden från en React Context med `useContext` i TypeScript?",
+    "Hur konsumerar du värden från en React Context med `useContext`?",
     [
       new CorrectAnswer("const contextValue = useContext(MyContext);"),
       new IncorrectAnswer("const contextValue = useMyContext();"),
@@ -48,7 +48,7 @@ export const useContextQuestions: Question[] = [
   ),
 
   new Question(
-    "Vad händer om du försöker använda `useContext` utanför en React Context-provider i TypeScript?",
+    "Vad händer om du försöker använda `useContext` utanför en React Context-provider?",
     [
       new IncorrectAnswer(
         "Det kommer inte att påverka applikationens beteende.",

@@ -33,7 +33,7 @@ export const useEffectQuestions: Question[] = [
   ),
 
   new Question(
-    "Vad är syftet med den andra parameter som skickas till `useEffect` i TypeScript?",
+    "Vad är syftet med den andra parameter som skickas till `useEffect`?",
     [
       new CorrectAnswer(
         "Den innehåller en array av värden som useEffect ska bevaka för förändringar.",
@@ -45,21 +45,18 @@ export const useEffectQuestions: Question[] = [
     ],
   ),
 
-  new Question(
-    "Vad händer om den andra parametern i `useEffect` är tom i TypeScript?",
-    [
-      new CorrectAnswer(
-        "`useEffect` kommer att köras endast en gång efter första renderingen.",
-      ),
-      new IncorrectAnswer(
-        "`useEffect` kommer att köras vid varje renderingscykel.",
-      ),
-      new IncorrectAnswer("Det kommer att generera ett kompileringsfel."),
-    ],
-  ),
+  new Question("Vad händer om den andra parametern i `useEffect` är tom?", [
+    new CorrectAnswer(
+      "`useEffect` kommer att köras endast en gång efter första renderingen.",
+    ),
+    new IncorrectAnswer(
+      "`useEffect` kommer att köras vid varje renderingscykel.",
+    ),
+    new IncorrectAnswer("Det kommer att generera ett kompileringsfel."),
+  ]),
 
   new Question(
-    "Kan du använda flera `useEffect`-anrop i samma funktionella komponent i TypeScript?",
+    "Kan du använda flera `useEffect`-anrop i samma funktionella komponent?",
     [
       new CorrectAnswer(
         "Ja, du kan använda flera `useEffect`-anrop för att hantera olika sidoeffekter.",

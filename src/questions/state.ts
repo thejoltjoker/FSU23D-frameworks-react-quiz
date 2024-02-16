@@ -12,7 +12,7 @@ export const useStateQuestions: Question[] = [
   ),
 
   new Question(
-    "Vad är syftet med den första värdet som `useState` returnerar i TypeScript?",
+    "Vad är syftet med den första värdet som `useState` returnerar?",
     [
       new IncorrectAnswer("Det är det aktuella tillståndet."),
       new CorrectAnswer(
@@ -23,7 +23,7 @@ export const useStateQuestions: Question[] = [
   ),
 
   new Question(
-    "Kan du använda flera `useState`-anrop i samma funktionella komponent i TypeScript?",
+    "Kan du använda flera `useState`-anrop i samma funktionella komponent?",
     [
       new CorrectAnswer(
         "Ja, du kan använda flera `useState`-anrop för att hantera olika tillstånd.",
@@ -36,7 +36,7 @@ export const useStateQuestions: Question[] = [
   ),
 
   new Question(
-    "Vad händer om du kallar `useState` med `null` som initialtillstånd i TypeScript?",
+    "Vad händer om du kallar `useState` med `null` som initialtillstånd?",
     [
       new IncorrectAnswer("Det genererar ett kompileringsfel."),
       new CorrectAnswer("Det skapar ett initialtillstånd av typen `null`."),
@@ -45,7 +45,7 @@ export const useStateQuestions: Question[] = [
   ),
 
   new Question(
-    "Kan du använda `useState` med komplexa datatyper som objekt och arrayer i TypeScript?",
+    "Kan du använda `useState` med komplexa datatyper som objekt och arrayer?",
     [
       new CorrectAnswer(
         "Ja, du kan använda `useState` med objekt och arrayer.",

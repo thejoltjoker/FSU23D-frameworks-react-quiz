@@ -58,12 +58,4 @@ export const generalQuestions: Question[] = [
       "Props och state är synonymer och kan användas omväxlande.",
     ),
   ]),
-
-  new Question("Vad är livscykelmetoderna i en klasskomponent i React?", [
-    new IncorrectAnswer("Metoder för att starta och stoppa webbsidan."),
-    new CorrectAnswer(
-      "Metoder som körs vid olika skeden av en komponents livscykel, som componentDidMount och componentWillUnmount.",
-    ),
-    new IncorrectAnswer("Metoder som hanterar återanvändning av komponenter."),
-  ]),
 ];
