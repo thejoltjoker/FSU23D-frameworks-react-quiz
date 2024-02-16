@@ -1,0 +1,153 @@
+{
+  "useState": [
+    {
+      "question": "Vad är huvudsyftet med `useState` i React med TypeScript?",
+      "answers": [
+        { "text": "Hantera livscykelmetoder", "isCorrect": false },
+        {
+          "text": "Hantera tillstånd i funktionella komponenter",
+          "isCorrect": true
+        },
+        {
+          "text": "Hantera globala tillstånd i hela applikationen",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Hur deklarerar du en tillståndsvariabel med `useState` i en funktionell komponent med TypeScript?",
+      "answers": [
+        { "text": "const [state, setState] = useState();", "isCorrect": false },
+        {
+          "text": "const [state, setState] = useState(initialState);",
+          "isCorrect": true
+        },
+        { "text": "const state = useState();", "isCorrect": false }
+      ]
+    },
+    {
+      "question": "Vad är den typiska syntaxen för att använda `useState` med TypeScript?",
+      "answers": [
+        {
+          "text": "const [state, setState] = useState<number>(0);",
+          "isCorrect": true
+        },
+        {
+          "text": "const [state, setState] = useState(0);",
+          "isCorrect": false
+        },
+        {
+          "text": "const [state, setState] = useState<string>('');",
+          "isCorrect": true
+        }
+      ]
+    }
+  ],
+  "useEffect": [
+    {
+      "question": "Vad är syftet med `useEffect` i React med TypeScript?",
+      "answers": [
+        {
+          "text": "Hantera tillstånd i funktionella komponenter",
+          "isCorrect": false
+        },
+        {
+          "text": "Hantera livscykelmetoder och sidaeffekter i funktionella komponenter",
+          "isCorrect": true
+        },
+        {
+          "text": "Hantera globala tillstånd i hela applikationen",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Hur kan du använda `useEffect` för att köra en funktion när komponenten monteras?",
+      "answers": [
+        { "text": "useEffect(() => {}, []);", "isCorrect": false },
+        {
+          "text": "useEffect(() => {if (state) return;});",
+          "isCorrect": false
+        },
+        { "text": "useEffect(() => {}, [props]);", "isCorrect": false }
+      ]
+    }
+  ],
+  "useContext": [
+    {
+      "question": "Vad är syftet med `useContext` i React med TypeScript?",
+      "answers": [
+        {
+          "text": "Hantera tillstånd i funktionella komponenter",
+          "isCorrect": false
+        },
+        {
+          "text": "Få tillgång till den globala kontexten och dess värden",
+          "isCorrect": true
+        },
+        {
+          "text": "Hantera livscykelmetoder och sidaeffekter i funktionella komponenter",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Hur använder du `useContext` för att få tillgång till kontextvärden?",
+      "answers": [
+        {
+          "text": "const contextValue = useContext(MyContext);",
+          "isCorrect": true
+        },
+        { "text": "const contextValue = useMyContext();", "isCorrect": false },
+        {
+          "text": "const contextValue = MyContext.useContext();",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Vad händer om det inte finns någon matchande kontext för `useContext`?",
+      "answers": [
+        { "text": "Det returnerar `undefined`.", "isCorrect": true },
+        { "text": "Det kastar ett fel.", "isCorrect": false },
+        { "text": "Det returnerar en tom sträng.", "isCorrect": false }
+      ]
+    }
+  ],
+  "useReducer": [
+    {
+      "question": "Vad är syftet med `useReducer` i React med TypeScript?",
+      "answers": [
+        {
+          "text": "Hantera tillstånd i funktionella komponenter",
+          "isCorrect": true
+        },
+        {
+          "text": "Få tillgång till den globala kontexten och dess värden",
+          "isCorrect": false
+        },
+        {
+          "text": "Hantera livscykelmetoder och sidaeffekter i funktionella komponenter",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "question": "Vad är användningen av `dispatch`-funktionen som returneras av `useReducer`?",
+      "answers": [
+        {
+          "text": "Den används för att skicka data till komponenten.",
+          "isCorrect": false
+        },
+        {
+          "text": "Den används för att aktivera reducer-funktionen och uppdatera tillståndet.",
+          "isCorrect": true
+        },
+        {
+          "text": "Den används för att avsluta komponenten.",
+          "isCorrect": false
+        }
+      ]
+    }
+  ]
+}
