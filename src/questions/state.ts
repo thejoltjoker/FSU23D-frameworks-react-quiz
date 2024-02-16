@@ -1,7 +1,7 @@
 import { CorrectAnswer, IncorrectAnswer } from "../models/Answer";
 import { Question } from "../models/Question";
 
-export const state: Question[] = [
+export const useStateQuestions: Question[] = [
   new Question(
     "Hur deklareras och används `useState` i en funktionell komponent med TypeScript?",
     [

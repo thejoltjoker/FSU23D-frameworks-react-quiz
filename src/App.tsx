@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import { Question } from "./models/Question";
 import _ from "lodash";
-import { questions } from "./questions";
+import { useEffect, useState } from "react";
+import IntroText from "./components/IntroText";
 import { Answer } from "./models/Answer";
+import { Question } from "./models/Question";
+import { questions } from "./questions";
 
 function App() {
-  const [countdown, setCountdown] = useState<number>(0);
+  const [countdown, setCountdown] = useState<number>(-1);
   const [question, setQuestion] = useState<Question>();
   const [category, setCategory] = useState<string>("");
 
@@ -28,7 +29,7 @@ function App() {
     event.currentTarget.classList.remove("bg-base-200");
 
     if (answer.isCorrect) {
-      setCountdown(5);
+      setCountdown(3);
       event.currentTarget.classList.add("bg-primary");
       console.log(question?.text, "✅", answer.text);
     } else {
@@ -55,38 +56,65 @@ function App() {
 
   return (
     <>
-      <div className="mx-auto max-w-screen-md rounded-xl bg-base-100 p-4">
-        <div className="flex justify-between">
-          <div className="uppercase tracking-wider opacity-50">{category}</div>
-          {countdown >= 0 ? (
-            <p>
-              Nästa fråga om <b>{countdown}</b> sek
-            </p>
-          ) : null}
+      <div className="flex h-full items-center justify-center">
+        <div className="w-full max-w-screen-md rounded-xl bg-base-100 p-4 shadow">
+          {question && (
+            <>
+              <div className="flex justify-between opacity-50">
+                <div className="uppercase tracking-wider">{category}</div>
+                {countdown > 0 ? (
+                  <p>
+                    Nästa fråga om <b>{countdown}</b> sek
+                  </p>
+                ) : null}
+              </div>
+              <div className="py-4">{question?.text}</div>
+              <ul className="flex flex-col gap-4 py-4">
+                {question?.answers.map((answer) => (
+                  <li
+                    key={answer.text}
+                    onClick={(e) => {
+                      if (countdown <= 0) handleResponse(e, answer);
+                    }}
+                    className="cursor-pointer rounded-lg border border-neutral/10 bg-base-200 p-4"
+                  >
+                    {answer.text}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {!question && (
+            <>
+              <IntroText />
+            </>
+          )}
+          <div className="flex h-16 items-center justify-center">
+            {!question && (
+              <button
+                className="btn btn-primary"
+                onClick={() => setRandomQuestion()}
+              >
+                Starta Quiz
+              </button>
+            )}
+            {countdown > 0 ? (
+              <button
+                className="btn border border-neutral/10"
+                onClick={() => {
+                  setCountdown(0);
+                  setRandomQuestion();
+                }}
+              >
+                Nästa fråga
+                <span className="flex size-6 items-center justify-center rounded-full bg-neutral/20">
+                  {countdown}
+                </span>
+              </button>
+            ) : null}
+          </div>
         </div>
-        <div className="py-4">{question?.text}</div>
-        <ul className="flex flex-col gap-4">
-          {question?.answers.map((answer) => (
-            <li
-              key={`${_.kebabCase(answer.text)}-${_.random(0, 2048)}`}
-              onClick={(e) => {
-                if (countdown <= 0) handleResponse(e, answer);
-              }}
-              className="cursor-pointer rounded-lg bg-base-200 p-4"
-            >
-              {answer.text}
-              {answer.isCorrect ? "✅" : "❌"}
-            </li>
-          ))}
-        </ul>
-        {!question && (
-          <button
-            className="btn btn-primary"
-            onClick={() => setRandomQuestion()}
-          >
-            Starta Quiz
-          </button>
-        )}
       </div>
     </>
   );
