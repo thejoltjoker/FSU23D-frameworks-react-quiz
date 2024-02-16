@@ -9,19 +9,19 @@ Välkommen till React Quiz-projektet! Här kan du bidra med frågor om React och
 2. **Klona din fork till din lokala maskin:**
 
    ```bash
-   git clone https://github.com/din-användarnamn/react-quiz.git
+   git clone https://github.com/thejoltjoker/FSU23D-frameworks-react-quiz
    ```
 
 3. **Navigera till projektmappen:**
 
    ```bash
-   cd react-quiz
+   cd FSU23D-frameworks-react-quiz
    ```
 
 4. **Skapa en ny gren för dina ändringar:**
 
    ```bash
-   git checkout -b lägg-till-frågor
+   git checkout -b questions
    ```
 
 5. **Gå till mappen `src/questions` och skapa en ny fil för dina frågor i valfri kategori, t.ex. `src/questions/react-hooks.ts`:**
@@ -47,7 +47,7 @@ Välkommen till React Quiz-projektet! Här kan du bidra med frågor om React och
    ```bash
    git add .
    git commit -m "Lägg till frågor om React-hooks"
-   git push origin lägg-till-frågor
+   git push origin questions
    ```
 
    Gå sedan till ditt forkade repo på GitHub och skapa en pull request.
