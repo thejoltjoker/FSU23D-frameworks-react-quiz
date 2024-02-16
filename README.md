@@ -1,3 +1,5 @@
+[Screenshot](./public/screenshot.png)
+
 # React Quiz
 
 Välkommen till React Quiz-projektet! Här kan du bidra med frågor om React och testa din kunskap om biblioteket. Följ nedan för att delta och lägga till dina egna frågor.
